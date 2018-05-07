@@ -1,2 +1,2 @@
-# pyopengles2
-OpenGLES2 bindings
+# pyegl
+Wrapper for PyOpenGLES2
