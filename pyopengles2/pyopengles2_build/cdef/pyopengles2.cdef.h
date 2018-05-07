@@ -1,1 +1,3 @@
-typedef void* EGLDisplay;
+typedef unsigned int GLbitfield;
+
+void glClear(GLbitfield mask);
