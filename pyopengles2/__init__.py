@@ -386,3 +386,7 @@ def glGetProgramInfoLog(program):
     infolog = ffi.new('char[]', max_length)
     lib.glGetProgramInfoLog(program, max_length, length, infolog)
     return infolog
+
+
+def glDeleteProgram(program):
+    lib.glDeleteProgram(program)
