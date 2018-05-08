@@ -368,3 +368,7 @@ def glDeleteShader(shader):
 
 def glAttachShader(program, shader):
     lib.glAttachShader(program, shader)
+
+
+def glLinkProgram(program):
+    lib.glLinkProgram(program)
