@@ -390,3 +390,8 @@ def glGetProgramInfoLog(program):
 
 def glDeleteProgram(program):
     lib.glDeleteProgram(program)
+
+
+def glGetAttribLocation(program, name):
+    cname = ffi.new('char*', name)
+    return lib.glGetAttribLocation(program, cname)

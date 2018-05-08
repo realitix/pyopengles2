@@ -22,3 +22,4 @@ void glLinkProgram(GLuint program);
 void glGetProgramiv(GLuint program, GLenum pname, GLint *params);
 void glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
 void glDeleteProgram(GLuint program);
+GLint glGetAttribLocation(GLuint program, const GLchar *name);
