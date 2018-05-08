@@ -343,3 +343,6 @@ def glShaderSource(shader, source):
 
     lib.glShaderSource(shader, count, strings, lengths)
 
+
+def glCompileShader(shader):
+    lib.glCompileShader(shader)
