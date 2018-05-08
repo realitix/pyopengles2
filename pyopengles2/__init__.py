@@ -378,3 +378,11 @@ def glGetProgramiv(program, pname):
     params = ffi.new('int*')
     lib.glGetProgramiv(program, pname, params)
     return params[0]
+
+
+def glGetProgramInfoLog(program):
+    max_length = 1024
+    length = ffi.new('int*')
+    infolog = ffi.new('char[]', max_length)
+    lib.glGetProgramInfoLog(program, max_length, length, infolog)
+    return infolog
