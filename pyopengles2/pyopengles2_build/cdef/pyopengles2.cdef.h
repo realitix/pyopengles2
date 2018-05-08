@@ -7,6 +7,7 @@ typedef unsigned int GLenum;
 typedef int GLsizei;
 typedef char GLchar;
 typedef int GLint;
+typedef unsigned char GLboolean;
 
 void glClear(GLbitfield mask);
 void glClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
@@ -27,3 +28,4 @@ GLint glGetUniformLocation(GLuint program, const GLchar *name);
 void glGenBuffers(GLsizei n, GLuint *buffers);
 void glBindBuffer(GLenum target, GLuint buffer);
 void glBufferData(GLenum target, GLsizeiptr size, const void *data, GLenum usage);
+void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *pointer);
