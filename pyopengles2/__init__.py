@@ -426,3 +426,7 @@ def glEnableVertexAttribArray(index):
 
 def glUseProgram(program):
     lib.glUseProgram(program)
+
+
+def glDrawArrays(mode, first, count):
+    lib.glDrawArrays(mode, first, count)
