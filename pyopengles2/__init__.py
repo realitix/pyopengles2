@@ -410,3 +410,7 @@ def glGenBuffers(n):
 
 def glBindBuffer(target, buf):
     lib.glBindBuffer(target, buf)
+
+
+def glBufferData(target, size, data, usage):
+    lib.glBufferData(target, size, data, usage)

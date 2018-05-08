@@ -26,3 +26,4 @@ GLint glGetAttribLocation(GLuint program, const GLchar *name);
 GLint glGetUniformLocation(GLuint program, const GLchar *name);
 void glGenBuffers(GLsizei n, GLuint *buffers);
 void glBindBuffer(GLenum target, GLuint buffer);
+void glBufferData(GLenum target, GLsizeiptr size, const void *data, GLenum usage);
