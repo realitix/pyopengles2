@@ -364,3 +364,7 @@ def glGetShaderInfoLog(shader):
 
 def glDeleteShader(shader):
     lib.glDeleteShader(shader)
+
+
+def glAttachShader(program, shader):
+    lib.glAttachShader(program, shader)
