@@ -360,4 +360,7 @@ def glGetShaderInfoLog(shader):
     infolog = ffi.new('char[]', max_length)
     lib.glGetShaderInfoLog(shader, max_length, length, infolog)
     return infolog
-    lib.
+
+
+def glDeleteShader(shader):
+    lib.glDeleteShader(shader)

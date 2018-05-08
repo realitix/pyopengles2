@@ -16,3 +16,4 @@ void glShaderSource(GLuint shader, GLsizei count, const GLchar *const*string, co
 void glCompileShader(GLuint shader);
 void glGetShaderiv(GLuint shader, GLenum pname, GLint *params);
 void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
+void glDeleteShader(GLuint shader);
