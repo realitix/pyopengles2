@@ -372,3 +372,9 @@ def glAttachShader(program, shader):
 
 def glLinkProgram(program):
     lib.glLinkProgram(program)
+
+
+def glGetProgramiv(program, pname):
+    params = ffi.new('int*')
+    lib.glGetProgramiv(program, pname, params)
+    return params[0]

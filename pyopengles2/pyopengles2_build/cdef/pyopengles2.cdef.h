@@ -19,3 +19,4 @@ void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei *length, GLchar 
 void glDeleteShader(GLuint shader);
 void glAttachShader(GLuint program, GLuint shader);
 void glLinkProgram(GLuint program);
+void glGetProgramiv(GLuint program, GLenum pname, GLint *params);
