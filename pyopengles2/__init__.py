@@ -329,3 +329,17 @@ def glCreateProgram():
 
 def glCreateShader(t):
     return lib.glCreateShader(t)
+
+
+def glShaderSource(shader, source):
+    source_lines = source.splitlines()
+    count = len(source_lines)
+    strings = ffi.new('char[]*', count)
+    lengths = ffi.new('int[]', count)
+
+    for i, line in enumerate(source_lines):
+        strings[i] = ffi.new('char*', line)
+        lengths[i] = len(strings[i])
+
+    lib.glShaderSource(shader, count, strings, lengths)
+
