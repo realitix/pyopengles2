@@ -322,5 +322,10 @@ def glClearColor(red, green, blue, alpha):
 def glClear(mask):
     lib.glClear(mask)
 
+
 def glCreateProgram():
     return lib.glCreateProgram()
+
+
+def glCreateShader(t):
+    return lib.glCreateShader(t)
