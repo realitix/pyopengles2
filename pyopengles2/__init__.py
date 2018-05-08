@@ -418,3 +418,7 @@ def glBufferData(target, size, data, usage):
 
 def glVertexAttribPointer(index, size, t, normalized, stride, pointer):
     lib.glVertexAttribPointer(index, size, t, normalized, stride, pointer)
+
+
+def glEnableVertexAttribArray(index):
+    lib.glEnableVertexAttribArray(index)
