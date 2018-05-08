@@ -1,6 +1,8 @@
 typedef float khronos_float_t;
+typedef signed long int khronos_ssize_t;
 
 typedef khronos_float_t GLfloat;
+typedef khronos_ssize_t GLsizeiptr;
 typedef unsigned int GLbitfield;
 typedef unsigned int GLuint;
 typedef unsigned int GLenum;
