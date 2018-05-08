@@ -422,3 +422,7 @@ def glVertexAttribPointer(index, size, t, normalized, stride, pointer):
 
 def glEnableVertexAttribArray(index):
     lib.glEnableVertexAttribArray(index)
+
+
+def glUseProgram(program):
+    lib.glUseProgram(program)

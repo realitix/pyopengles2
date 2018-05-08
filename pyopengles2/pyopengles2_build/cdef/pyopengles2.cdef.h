@@ -30,3 +30,4 @@ void glBindBuffer(GLenum target, GLuint buffer);
 void glBufferData(GLenum target, GLsizeiptr size, const void *data, GLenum usage);
 void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *pointer);
 void glEnableVertexAttribArray (GLuint index);
+void glUseProgram(GLuint program);
