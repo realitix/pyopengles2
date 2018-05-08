@@ -352,3 +352,12 @@ def glGetShaderiv(shader, pname):
     params = ffi.new('int*')
     lib.glGetShaderiv(shader, pname, params)
     return params[0]
+
+
+def glGetShaderInfoLog(shader):
+    max_length = 1024
+    length = ffi.new('int*')
+    infolog = ffi.new('char[]', max_length)
+    lib.glGetShaderInfoLog(shader, max_length, length, infolog)
+    return infolog
+    lib.
