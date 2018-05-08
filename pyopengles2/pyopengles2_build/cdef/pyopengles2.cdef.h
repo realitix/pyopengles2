@@ -25,3 +25,4 @@ void glDeleteProgram(GLuint program);
 GLint glGetAttribLocation(GLuint program, const GLchar *name);
 GLint glGetUniformLocation(GLuint program, const GLchar *name);
 void glGenBuffers(GLsizei n, GLuint *buffers);
+void glBindBuffer(GLenum target, GLuint buffer);

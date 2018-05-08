@@ -406,3 +406,7 @@ def glGenBuffers(n):
     buffers = ffi.new('unsigned int[]', n)
     lib.glGenBuffers(n, buffers)
     return buffers
+
+
+def glBindBuffer(target, buf):
+    lib.glBindBuffer(target, buf)
