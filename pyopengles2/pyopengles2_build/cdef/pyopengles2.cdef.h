@@ -14,3 +14,4 @@ GLuint glCreateProgram(void);
 GLuint glCreateShader(GLenum type);
 void glShaderSource(GLuint shader, GLsizei count, const GLchar *const*string, const GLint *length);
 void glCompileShader(GLuint shader);
+void glGetShaderiv(GLuint shader, GLenum pname, GLint *params);

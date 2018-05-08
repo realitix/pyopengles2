@@ -346,3 +346,9 @@ def glShaderSource(shader, source):
 
 def glCompileShader(shader):
     lib.glCompileShader(shader)
+
+
+def glGetShaderiv(shader, pname):
+    params = ffi.new('int*')
+    lib.glGetShaderiv(shader, pname, params)
+    return params[0]
