@@ -334,12 +334,16 @@ def glCreateShader(t):
 def glShaderSource(shader, source):
     source_lines = source.splitlines()
     count = len(source_lines)
-    strings = ffi.new('char[]*', count)
+    strings = ffi.new('char*[]', count)
     lengths = ffi.new('int[]', count)
+    ref_strings = []
 
     for i, line in enumerate(source_lines):
-        strings[i] = ffi.new('char*', line)
-        lengths[i] = len(strings[i])
+        cb = line.encode('ascii')
+        s = ffi.new('char[]', cb)
+        ref_strings.append(s)
+        strings[i] = s
+        lengths[i] = len(cb)
 
     lib.glShaderSource(shader, count, strings, lengths)
 
@@ -355,11 +359,11 @@ def glGetShaderiv(shader, pname):
 
 
 def glGetShaderInfoLog(shader):
-    max_length = 1024
+    max_length = 2048
     length = ffi.new('int*')
     infolog = ffi.new('char[]', max_length)
     lib.glGetShaderInfoLog(shader, max_length, length, infolog)
-    return infolog
+    return ffi.string(infolog).decode('utf-8')
 
 
 def glDeleteShader(shader):
