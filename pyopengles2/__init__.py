@@ -397,7 +397,7 @@ def glDeleteProgram(program):
 
 
 def glGetAttribLocation(program, name):
-    cname = ffi.new('char*', name)
+    cname = ffi.new('char[]', name.encode('ascii'))
     return lib.glGetAttribLocation(program, cname)
 
 
