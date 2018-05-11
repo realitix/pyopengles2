@@ -422,6 +422,9 @@ def glBufferData(target, size, data, usage):
 
 
 def glVertexAttribPointer(index, size, t, normalized, stride, pointer):
+    if not pointer:
+        pointer = ffi.NULL
+
     lib.glVertexAttribPointer(index, size, t, normalized, stride, pointer)
 
 
