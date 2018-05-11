@@ -417,7 +417,8 @@ def glBindBuffer(target, buf):
 
 
 def glBufferData(target, size, data, usage):
-    lib.glBufferData(target, size, data, usage)
+    cbuf = ffi.from_buffer(data)
+    lib.glBufferData(target, size, ffi.cast('void*', cbuf), usage)
 
 
 def glVertexAttribPointer(index, size, t, normalized, stride, pointer):
