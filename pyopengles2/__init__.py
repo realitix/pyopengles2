@@ -432,6 +432,10 @@ def glEnableVertexAttribArray(index):
     lib.glEnableVertexAttribArray(index)
 
 
+def glDisableVertexAttribArray(index):
+    lib.glDisableVertexAttribArray(index)
+
+
 def glUseProgram(program):
     lib.glUseProgram(program)
 
