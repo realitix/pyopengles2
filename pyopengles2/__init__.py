@@ -422,9 +422,10 @@ def glBufferData(target, size, data, usage):
 
 
 def glVertexAttribPointer(index, size, t, normalized, stride, pointer):
-    if not pointer:
-        pointer = ffi.NULL
-
+    '''This function only works with VBO because we can't pass a pointer to pointer.
+    So pointer is the Byte offset (like stride)
+    '''
+    pointer = ffi.cast('void*', pointer)
     lib.glVertexAttribPointer(index, size, t, normalized, stride, pointer)
 
 
